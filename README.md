@@ -1,4 +1,5 @@
 # NYC-Taxi-Fare-Analysis
+> Large-scale data analysis and predictive modeling on NYC Yellow Taxi trip records using PySpark.
 
 ## 📓 Project Notebook
 
