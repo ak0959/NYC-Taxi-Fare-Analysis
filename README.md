@@ -1,5 +1,22 @@
 # NYC-Taxi-Fare-Analysis
 
+## 📓 Project Notebook
+
+The complete analysis, data preparation, feature engineering, exploratory analysis, and modeling workflow is available in the Jupyter Notebook below:
+
+👉 **NYC_Taxi_Fare_Analysis.ipynb**
+
+This notebook contains:
+- Data loading and sampling using Apache Spark
+- Data quality checks and cleaning
+- Exploratory data analysis (EDA)
+- Feature engineering
+- Fare prediction modeling and evaluation
+- Visualizations and diagnostics
+
+You can view the notebook directly on GitHub or run it locally using Jupyter Notebook or JupyterLab.
+
+
 ## Executive Summary
 
 This project presents an end-to-end analysis of **NYC Yellow Taxi trip data (2024)** with the goal of understanding fare behavior, demand patterns, and fare predictability at scale.
