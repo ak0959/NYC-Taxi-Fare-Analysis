@@ -301,134 +301,67 @@ Despite these limitations, the project provides a solid, realistic foundation fo
 
 ## How to Reproduce This Project (Setup Guide)
 
-This project analyzes NYC Taxi trip data using Apache Spark in local mode.
-Due to repository size constraints, large datasets are **not stored** in GitHub.
-Instead, users are expected to download the data directly from the official source
-and place it in the required folder structure before running the notebook.
+This repository is designed primarily for **code review, methodology transparency, and results interpretation**.
+
+The full end-to-end analysis is contained in a single Jupyter Notebook, which can be viewed directly on GitHub without any local setup:
+
+➡️ **[NYC Taxi Fare Analysis – Full Notebook](./nyc_taxi_2024_analysis.ipynb)**
 
 ---
 
-### 1. Clone the Repository
+### Viewing the Analysis (Recommended)
 
-Run the following commands:
+No local setup is required to review this project.
 
-    git clone https://github.com/<your-username>/NYC-Taxi-Fare-Analysis.git
-    cd NYC-Taxi-Fare-Analysis
+- Open the notebook link above
+- GitHub renders all code, outputs, tables, and visualizations inline
+- All analytical steps, assumptions, and results are fully documented
+
+This is the recommended way to explore the project.
 
 ---
 
-### 2. Prerequisites
+### Running the Notebook Locally (Optional)
 
-Ensure the following are installed:
+If you wish to execute the notebook locally, follow the steps below.
 
-- Python 3.10 or above
-- Java 11 or Java 17 (required for Spark)
+#### Prerequisites
+
+- Python 3.10+
+- Java 11 or Java 17
 - Apache Spark 3.5+
+- Jupyter Notebook or JupyterLab
 - Git
-- Jupyter Notebook or VS Code with Jupyter extension
-- Optional but recommended:
-  Linux / WSL (Windows Subsystem for Linux) for smoother Spark execution
 
-Spark is used in local (single-machine) mode.  
-No distributed cluster is required.
+Spark is used in **local mode**. No cluster is required.
 
 ---
 
-### 3. Download the NYC Taxi Data
+### Data Requirements
 
-This project uses **NYC Yellow Taxi Trip Records**.
+This project uses **NYC Yellow Taxi Trip Records (2024)** published by the NYC Taxi & Limousine Commission.
 
 Official source:
 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-Download:
-- Yellow Taxi Trip Records (Parquet format)
-- Year: 2024
+Due to GitHub file size limits, **raw datasets and derived Parquet files are not stored in this repository**.
+
+To run the notebook locally:
+- Download the 2024 Yellow Taxi Parquet files from the official TLC portal
+- Update the data loading paths inside the notebook to point to your local data location
+
+All sampling logic and preprocessing steps are documented inside the notebook itself.
 
 ---
 
-### 4. Folder Structure Setup
-
-After downloading, organize the data as follows:
-
-    NYC-Taxi-Fare-Analysis/
-    ├── notebooks/
-    │   └── nyc_taxi_analysis.ipynb
-    │
-    ├── data/
-    │   └── raw/
-    │       └── 2024/
-    │           ├── yellow_tripdata_2024-01.parquet
-    │           ├── yellow_tripdata_2024-02.parquet
-    │           └── ...
-    │
-    ├── outputs/
-    │   └── figures/
-    │
-    ├── requirements.txt
-    └── README.md
-
-The notebook assumes this directory structure.
-
----
-
-### 5. Install Python Dependencies
-
-Install required libraries using:
-
-    pip install -r requirements.txt
-
----
-
-### 6. Verify Spark Installation
-
-Confirm Spark is available:
-
-    spark-submit --version
-
-Spark version 3.5.x or higher should be displayed.
-
----
-
-### 7. Run the Notebook
-
-Option A: Jupyter Notebook
-
-    jupyter notebook
-
-Open:
-    notebooks/nyc_taxi_analysis.ipynb
-
-Run all cells from top to bottom.
-
-Option B: VS Code
-
-- Open the repository folder in VS Code
-- Open notebooks/nyc_taxi_analysis.ipynb
-- Select a Python kernel with Spark available
-- Execute cells sequentially
-
----
-
-### 8. What the Notebook Does
-
-The notebook performs the following steps:
-
-- Loads raw Parquet files using Spark
-- Creates a reproducible working sample
-- Performs data quality checks and cleaning
-- Conducts exploratory data analysis (EDA)
-- Engineers features for modeling
-- Trains and evaluates multiple regression models
-- Compares model performance and prediction quality
-
----
-
-### 9. Reproducibility Notes
+### Reproducibility Notes
 
 - Sampling uses a fixed random seed
-- All transformations are deterministic
-- Metrics may vary slightly depending on hardware and Spark configuration
+- Feature engineering steps are deterministic
+- Model results may vary slightly depending on hardware and Spark configuration
+
+The primary goal of this repository is to demonstrate **scalable analytics workflow, modeling decisions, and insight generation**, rather than to function as a plug-and-play data pipeline.
+
 
 
 
