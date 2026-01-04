@@ -4,7 +4,7 @@
 
 The complete analysis, data preparation, feature engineering, exploratory analysis, and modeling workflow is available in the Jupyter Notebook below:
 
-👉 **NYC_Taxi_Fare_Analysis.ipynb**
+**[NYC_Taxi_Fare_Analysis.ipynb](NYC_Taxi_Fare_Analysis.ipynb)**  
 
 This notebook contains:
 - Data loading and sampling using Apache Spark
