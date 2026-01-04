@@ -4,7 +4,8 @@
 
 ➡️ **[NYC Taxi Fare Analysis – Full Notebook](./nyc_taxi_2024_analysis.ipynb)**
 
-> Note: Due to GitHub file size constraints, the raw TLC dataset and derived Parquet files are not stored in this repository. The notebook documents how the dataset was sampled and processed.
+> Due to GitHub file size limits, the full raw dataset and derived Parquet files are not stored in this repository.  
+> Sampling and preprocessing logic are fully documented inside the analysis notebook.
 
 This notebook contains:
 - Data loading and sampling using Apache Spark
@@ -49,8 +50,8 @@ The repository is designed to be **fully reproducible**, with all assumptions, d
 - **Year Used:** 2024  
 - **Official Portal:** https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-> Due to GitHub file size limits, the full raw dataset is not stored in this repository.  
-> A sampled version is used for analysis and documented under `data/samples/`.
+> Due to GitHub file size limits, the full raw dataset and derived Parquet files are not stored in this repository.  
+> Sampling and preprocessing logic are fully documented inside the analysis notebook.
 
 ## Problem Statement
 
