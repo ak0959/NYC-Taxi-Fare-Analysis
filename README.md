@@ -309,6 +309,8 @@ Ensure the following are installed:
 - Apache Spark 3.5+
 - Git
 - Jupyter Notebook or VS Code with Jupyter extension
+- Optional but recommended:
+  Linux / WSL (Windows Subsystem for Linux) for smoother Spark execution
 
 Spark is used in local (single-machine) mode.  
 No distributed cluster is required.
